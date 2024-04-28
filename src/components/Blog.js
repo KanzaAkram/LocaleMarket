@@ -17,9 +17,9 @@ export const Blog = () => {
     <div>
       <div>
         <Heading
-          heading={"Akira Collections"}
+          heading={"Locale Market Collections"}
           subheading={"Latest From Blog"}
-          description={"Nullem Gravida, dolor auc lorirem imps ome "}
+          description={"Local Treasures Unveiled Here "}
         />
       </div>
       <div className="w-10/12 m-auto">

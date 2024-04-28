@@ -27,9 +27,9 @@ export const Feature = () => {
     <div>
       <div>
         <Heading
-          heading={"Akira Collections"}
+          heading={"Locale Collections"}
           subheading={"Featured products"}
-          description={"Nullem Gravida, dolor auc lorirem imps ome "}
+          description={"Discover Unique Local Market Finds"}
         />
       </div>
       <div className="w-10/12 m-auto">

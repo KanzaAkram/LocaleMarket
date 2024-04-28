@@ -33,7 +33,7 @@ const Header = () => {
       >
         <div className=" flex flex-wrap justify-between pt-3 pb-3 w-10/12 m-auto">
           <div className="logo">
-            <img src="./images/logo.png" alt="logo" />
+            <img src="./images/logo-w.png" alt="logo" />
           </div>
           <ul className="flex flex-wrap text-base font-medium uppercase">
             {navbar.map((nav, index) => (

@@ -25,7 +25,7 @@ const Sidebar = ({ isSidebarOpen, closeSidebar }) => {
       {isSidebarOpen && (
         <div className="w-1/4 fixed top-0 right-0 bg-white shadow-lg h-screen z-50 transition-all duration-300 overflow-y-auto">
           <div className="border-b mb-4">
-            <h1 className="text-3xl p-4">Your Cart</h1>
+            <h1 className="text-3xl p-4">Your Cart Items</h1>
           </div>
           <div className="p-4">
             <span className="absolute right-0 top-0 p-4" onClick={closeSidebar}>

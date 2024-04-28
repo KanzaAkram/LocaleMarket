@@ -33,25 +33,25 @@ export const banners = [
     banner: "../images/slider3.jpg",
   },
   {
-    banner: "../images/slider2.jpg",
+    banner: "../images/slider2.png",
   },
   {
-    banner: "../images/slider1.jpg",
+    banner: "../images/slider1.png",
   },
 ];
 
 export const bannar_down = [
   {
-    img: "../images/MEN.jpg",
-    name: "MEN",
+    img: "../images/clothes.jpeg",
+    name: "CLOTHES",
   },
   {
-    img: "../images/WOMEN.jpg",
-    name: "WOMEN",
+    img: "../images/cosmetic.jpeg",
+    name: "COSMETIC",
   },
   {
-    img: "../images/ACCESSORIES.jpg",
-    name: "ACCESSORIES",
+    img: "../images/craft.png",
+    name: "CRAFTS",
   },
 ];
 

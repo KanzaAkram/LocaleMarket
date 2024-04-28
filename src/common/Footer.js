@@ -12,10 +12,9 @@ const Footer = () => {
               <img src={logo} alt="logo" />
             </div>
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              type and scrambled it to make a type specimen book. It has Lorem
-              Ipsum.
+              Locale Market brings neighborhood shopping to your fingertips.
+              Send big love to small businesses — and enjoy the best of local
+              communities, all from home.
             </p>
           </div>
           {footer.map((val, index) => (

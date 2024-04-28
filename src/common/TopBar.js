@@ -11,10 +11,10 @@ const TopBar = () => {
             ENGLISH
           </Link>
           <Link className="mr-2 text-white uppercase border-r-2 pl-2 pr-4">
-            usd
+            PKR
           </Link>
           <Link className="mr-2 text-white uppercase pl-2 ">
-            Free shipping for all orders of $150
+            Free shipping for all orders of Rs. 5000 or more
           </Link>
         </li>
         <li className="flex place-items-center">

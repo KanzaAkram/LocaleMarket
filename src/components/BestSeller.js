@@ -29,9 +29,11 @@ export const BestSeller = () => {
     <div>
       <div>
         <Heading
-          heading={"Akira Collections"}
+          heading={"Locale Market Collections"}
           subheading={"Our BestSeller"}
-          description={"Nullem Gravida, dolor auc lorirem imps ome "}
+          description={
+            "Elevate your shopping experience with Locale Market.  "
+          }
         />
       </div>
       <div className="w-10/12 m-auto">
