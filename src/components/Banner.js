@@ -26,7 +26,7 @@ const Banner = () => {
               <img src={data.banner} alt="banner" className="w-full" />
               <div className="banner-items">
                 <h2>All Collections</h2>
-                <h1>Get Up to 50% Off Select Styles.</h1>
+                <h1>Get Up to 50% Off on featured items.</h1>
                 <button type="button" className="mt-4 btn pt-3 pb-3 pr-6 pl-6">
                   Shop Now
                 </button>
