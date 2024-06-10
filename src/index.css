@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.items_count {
+  width: 25px;
+  height: 25px;
+  background: red;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: -10px;
+  right: -20px;
+}
+.items_count span {
+  font-size: small;
+}
+
+.banner-items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-items h2 {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 16px;
+  letter-spacing: 3px;
+}
+.banner-items h1 {
+  color: #ffffff;
+  font-size: 56px;
+  font-weight: 700;
+  text-transform: capitalize;
+  line-height: 66px;
+}
+.banner-items button,
+.bg-design-cover button,
+.addtocart button,
+.size-btn button,
+.mwa button:hover {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-width: 0px;
+  border-radius: 0px;
+  background-color: #f05a66;
+  color: #fff;
+}
+.translate {
+  transform: translate(-50%, 50%);
+}
+.slick-prev {
+  z-index: 1;
+  left: 0 !important;
+}
+.slick-next {
+  right: 0 !important;
+}
+.slick-prev,
+.slick-next {
+  color: white !important;
+  width: 3rem !important;
+  height: 3rem !important;
+}
+.mwa button {
+  background-color: #ffffff;
+  color: #f05a66;
+  transition: all 0.5s ease-in-out;
+}
+.image-container .hidden {
+  transition: display 0.5s ease-in-out;
+}
+.image-container:hover .hidden {
+  display: block;
+}
+.bg-image {
+  background-image: url(./../public/images/bg_testi.jpg);
+  padding: 6rem 0;
+  position: relative;
+}
+.bg-image-overlay {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+.bg-design-cover {
+  background-image: url(./../public/images/bg2.jpg);
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  position: relative;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  overflow: auto;
+}
