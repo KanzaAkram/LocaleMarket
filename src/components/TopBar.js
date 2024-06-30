@@ -22,7 +22,7 @@ const TopBar = () => {
           <Link to="/Contact" className="mr-5 text-white uppercase pl-4 border-l-2 border-r-2 pr-4">
             Contact Us
           </Link>
-          <Link className="mr-5 text-white uppercase border-r-2 pr-4">
+          <Link to="/SellerDashboard" className="mr-5 text-white uppercase border-r-2 pr-4">
             Login
           </Link>
         </li>

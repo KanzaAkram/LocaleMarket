@@ -9,6 +9,8 @@ import {
   Contact,
   NotFoundPage,
 } from "./pages/index";
+import SellerDashboard from "./pages/SellerDashboard";
+import Checkout from "./pages/Checkout";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NotFoundPage />} />
+          <Route path="/sellerdashboard" element={<SellerDashboard />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
         <Footer />
       </Router>
