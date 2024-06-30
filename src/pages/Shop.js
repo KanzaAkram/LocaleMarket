@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { feateures } from "../data/Data";
 import { BiCart, BiGitCompare, BiHeart, BiSearch } from "react-icons/bi";
-import { Model } from "../common/Model";
-import PageHeading from "../common/PageHeading";
+import { Model } from "../components/Model";
+import PageHeading from "../components/PageHeading";
 
 const Shop = () => {
   const [isModalOpen, setIsModalOpen] = useState(null);
