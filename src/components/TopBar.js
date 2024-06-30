@@ -6,7 +6,7 @@ const TopBar = () => {
   return (
     <div className="bg-red-600 p-2">
       <ul className="flex place-content-between">
-        <li>
+        {/* <li>
           <Link className="mr-2 text-white uppercase border-l-2 pr-4 pl-4 border-r-2">
             ENGLISH
           </Link>
@@ -16,14 +16,14 @@ const TopBar = () => {
           <Link className="mr-2 text-white uppercase pl-2 ">
             Free shipping for all orders of Rs. 5000 or more
           </Link>
-        </li>
+        </li> */}
         <li className="flex place-items-center">
           <Icon />
-          <Link className="mr-5 text-white uppercase pl-4 border-l-2 border-r-2 pr-4">
+          <Link to="/Contact" className="mr-5 text-white uppercase pl-4 border-l-2 border-r-2 pr-4">
             Contact Us
           </Link>
           <Link className="mr-5 text-white uppercase border-r-2 pr-4">
-            FAQs
+            Login
           </Link>
         </li>
       </ul>
