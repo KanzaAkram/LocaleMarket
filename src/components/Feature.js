@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Slider from "react-slick";
 import { feateures } from "../data/Data";
-import { Heading } from "../common/Heading";
+import { Heading } from "../components/Heading";
 import { BiCart, BiGitCompare, BiHeart, BiSearch } from "react-icons/bi";
-import { Model } from "../common/Model";
+import { Model } from "../components/Model";
 
 export const Feature = () => {
   const [isModalOpen, setIsModalOpen] = useState(null);

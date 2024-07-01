@@ -29,28 +29,31 @@ const Header = () => {
   return (
     <>
       <div
-        className={`${isSticky ? "sticky top-0 z-50 bg-white shadow-xl" : ""}`}
+        // className={`${isSticky ? "sticky top-0 z-50 bg-white shadow-xl" : ""}`}
+        className={`${
+          isSticky ? "sticky top-0 z-50 bg-white shadow-xl" : ""
+        } transition-colors duration-300 ease-in-out ${!isSticky ? "bg-red" : ""}`}
       >
         <div className=" flex flex-wrap justify-between pt-3 pb-3 w-10/12 m-auto">
           <div className="logo">
-            <img src="./images/logo-w.png" alt="logo" />
+            <img src="./images/logo_w.png" alt="logo" />
           </div>
-          <ul className="flex flex-wrap text-base font-medium uppercase">
+          <ul className="flex flex-wrap text-xl font-medium uppercase">
             {navbar.map((nav, index) => (
               <li className="mr-5" key={index}>
-                <Link className="hover:text-red-600" to={nav.path}>
+                <Link className="hover:text-white" to={nav.path}>
                   {nav.nav}
                 </Link>
               </li>
             ))}
           </ul>
 
-          <div className="flex flex-wrap text-2xl">
-            <Link className="mr-4 hover:text-red-600">
+          <div className="flex flex-wrap text-2xxl">
+            <Link className="mr-4 text-2xxxl hover:text-white">
               <BiSearch />
             </Link>
             <div className="relative">
-              <Link className="hover:text-red-600" onClick={toggleSidebar}>
+              <Link className="text-2xxl hover:text-white" onClick={toggleSidebar}>
                 <BiShoppingBag />
               </Link>
               <div className="items_count">

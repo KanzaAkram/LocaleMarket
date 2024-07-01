@@ -5,7 +5,7 @@ import { Review } from "../components/Review";
 import { BestSeller } from "../components/BestSeller";
 import { NewDesignCover } from "../components/NewDesignCover";
 import { Blog } from "../components/Blog";
-import Sidebar from "../common/Sidebar";
+import Sidebar from "../components/Sidebar";
 
 const Home = () => {
   return (

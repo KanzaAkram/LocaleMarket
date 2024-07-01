@@ -1,10 +1,10 @@
-import TopBar from "./../common/TopBar";
+import TopBar from "./../components/TopBar";
 import Home from "./Home";
 import Shop from "./Shop";
 import Cart from "./Cart";
 import Contact from "./Contact";
 import NotFoundPage from "./NotFoundPage";
-import Header from "./../common/Header";
-import Footer from "./../common/Footer";
+import Header from "./../components/Header";
+import Footer from "./../components/Footer";
 
 export { TopBar, Home, Shop, Cart, Header, Footer, Contact, NotFoundPage };

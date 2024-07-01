@@ -832,6 +832,10 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-red{
+  background-color: rgba(240,90,102,255);
+}
+
 .p-10 {
   padding: 2.5rem;
 }
@@ -922,7 +926,19 @@ video {
 
 .text-2xl {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 2.75rem;
+}
+
+.text-2xxl {
+  font-size: 1.5rem;
+  line-height: 3.75rem;
+  margin-top: 10px;
+}
+
+.text-2xxxl {
+  font-size: 1.5rem;
+  line-height: 3.75rem;
+  margin-top: 1.5px;
 }
 
 .text-3xl {
@@ -947,7 +963,7 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
+  line-height: 2.75rem;
 }
 
 .font-bold {
@@ -992,6 +1008,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-red{
+  background-color: rgba(240,90,102,255);
 }
 
 .text-yellow-700 {
@@ -1048,6 +1068,11 @@ video {
 .hover\:text-red-600:hover {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(225 225 225 / var(--tw-text-opacity));
 }
 
 .hover\:opacity-100:hover {

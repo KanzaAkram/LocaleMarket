@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Heading } from "../common/Heading";
+import { Heading } from "../components/Heading";
 import { blogs } from "../data/Data";
 
 export const Blog = () => {

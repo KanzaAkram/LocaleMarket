@@ -9,12 +9,13 @@ import {
   Contact,
   NotFoundPage,
 } from "./pages/index";
+import LoginSignupPage from "./components/loginSignup";
 
 function App() {
   return (
     <div>
       <Router>
-        <TopBar />
+        {/* <TopBar /> */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -22,6 +23,7 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NotFoundPage />} />
+          <Route path="/loginsignup" element={<LoginSignupPage />} />
         </Routes>
         <Footer />
       </Router>
