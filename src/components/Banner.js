@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { BiChevronRight, BiChevronLeft } from "react-icons/bi";
+import { useNavigate } from "react-router-dom";
 
 const Banner = () => {
   var settings = {
@@ -17,6 +18,13 @@ const Banner = () => {
     nextArrow: <BiChevronRight />,
     prevArrow: <BiChevronLeft />,
   };
+
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/Shop"); 
+  };
+
   return (
     <div>
       <div className="w-10/12 m-auto">
@@ -27,7 +35,7 @@ const Banner = () => {
               <div className="banner-items">
                 <h2>All Collections</h2>
                 <h1>Get Up to 50% Off on featured items.</h1>
-                <button type="button" className="mt-4 btn pt-3 pb-3 pr-6 pl-6">
+                <button type="button" className="mt-4 btn pt-3 pb-3 pr-6 pl-6" onClick={handleClick}>
                   Shop Now
                 </button>
               </div>
@@ -57,4 +65,6 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Banner;  // Ensure this line is at the very end of your file
+
+

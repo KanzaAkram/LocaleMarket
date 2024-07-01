@@ -68,6 +68,7 @@ export const feateures = [
     price: "129.00",
     description:
       "Discover exquisite handmade jewelry at the best prices. Elevate your style with our unique pieces, meticulously crafted for you. Explore now!",
+    reviews: []
   },
   {
     id: 2,
@@ -81,6 +82,7 @@ export const feateures = [
     price: "129.00",
     description:
       "Add charm to your space with our handmade rope baskets and bowls, available in four sizes. Elevate your home decor with these versatile essentials. Shop now!",
+    reviews: []
   },
   {
     id: 3,
@@ -94,6 +96,7 @@ export const feateures = [
     price: "129.00",
     description:
       "The pattern is hand embroidered & hand painted to give a dimension by me in my smoke free studio.The pillow cover has an envelope closure.Overlocked inner seams.Fabrics used for the pillow/cushion cover are linen and rayon blend and are all Pre washed before stitching (for shrinkage)",
+    reviews: []
   },
   {
     id: 4,
@@ -107,7 +110,9 @@ export const feateures = [
     price: "129.00",
     description:
       "Indulge in timeless elegance with our exquisite collection of Kurtis. Crafted with the finest fabrics and attention to detail, these pieces are perfect for any occasion. Elevate your wardrobe with effortless style. Shop now!",
+    reviews: []
   },
+  // ... other products
   // {
   //   id: 5,
   //   img: "../images/top_jeans_side.jpg",
