@@ -11,6 +11,7 @@ import {
 } from "./pages/index";
 import SellerDashboard from "./pages/SellerDashboard";
 import Checkout from "./pages/Checkout";
+import AddProducts from "./pages/AddProducts";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/*" element={<NotFoundPage />} />
           <Route path="/sellerdashboard" element={<SellerDashboard />} />
           <Route path="/checkout" element={<Checkout />} />
+          <Route path="/addproducts" element={<AddProducts />} />
         </Routes>
         <Footer />
       </Router>

@@ -27,8 +27,11 @@ const SellerDashboard = () => {
   return (
     <div className="px-4 py-8">
       <PageHeading home="Home" pagename="SellerDashboard">
-        <Link to="/add-product" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md">
+        <Link to="/add-product" className="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-md mr-2">
           Add Product
+        </Link>
+        <Link to="/upload-product" className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-md">
+          Upload Product
         </Link>
       </PageHeading>
       <div className="mx-auto max-w-screen-md bg-white rounded-lg shadow-lg p-6 text-center">
@@ -75,6 +78,8 @@ const SellerDashboard = () => {
 };
 
 export default SellerDashboard;
+
+
 
 
 
