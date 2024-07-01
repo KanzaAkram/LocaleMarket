@@ -12,6 +12,7 @@ import {
 import SellerDashboard from "./pages/SellerDashboard";
 import Checkout from "./pages/Checkout";
 import AddProducts from "./pages/AddProducts";
+import AddReview from "./pages/AddReview";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/sellerdashboard" element={<SellerDashboard />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/addproducts" element={<AddProducts />} />
+          <Route path="/addreview" element={<AddReview />} />
         </Routes>
         <Footer />
       </Router>

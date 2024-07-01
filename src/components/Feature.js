@@ -4,16 +4,19 @@ import { feateures } from "../data/Data";
 import { Heading } from "../components/Heading";
 import { BiCart, BiGitCompare, BiHeart, BiSearch } from "react-icons/bi";
 import { Model } from "../components/Model";
+import { Link } from "react-router-dom";
 
 export const Feature = () => {
   const [isModalOpen, setIsModalOpen] = useState(null);
 
-  const handleOpen = (productid) => {
-    setIsModalOpen(productid);
+  const handleOpen = (productId) => {
+    setIsModalOpen(productId);
   };
+
   const handleClose = () => {
     setIsModalOpen(null);
   };
+
   var settings = {
     dots: false,
     infinite: false,
@@ -23,6 +26,7 @@ export const Feature = () => {
     autoplay: false,
     autoplaySpeed: 2000,
   };
+
   return (
     <div>
       <div>
@@ -55,8 +59,36 @@ export const Feature = () => {
                       >
                         {val.btn}
                       </button>
+                      
                     </div>
+                    {/* <Link
+                        to="/AddReview"
+                        className="ml-2 text-xs bg-blue-500 text-white px-2 py-1 rounded"
+                      >
+                        Add Review
+                      </Link> */}
+                      {/* <Link
+                        to="/AddReview"
+                        style={{
+                          backgroundColor: 'green',
+                          color: 'white',
+                          padding: '0.25rem 0.5rem',
+                          borderRadius: '0.25rem',
+                          textAlign: 'center',
+                          display: 'inline-block',
+                          marginLeft: '0.5rem',
+                          fontSize: '0.75rem'
+                        }}
+                      >
+                        Add Review
+                      </Link> */}
                   </div>
+                  {/* <Link
+                        to="/AddReview"
+                        className="ml-2 text-xs bg-blue-500 text-white px-2 py-1 rounded"
+                      >
+                        Add Review
+                      </Link> */}
                   <div className="tag absolute top-0 z-10">
                     <p className="bg-green-600 m-2 rounded-full w-12 h-12 grid place-items-center text-white">
                       {val.tag}
@@ -85,6 +117,21 @@ export const Feature = () => {
                   </div>
                   <p className="text-red-600">${val.price}</p>
                 </div>
+                <Link
+                        to="/AddReview"
+                        style={{
+                          backgroundColor: 'green',
+                          color: 'white',
+                          padding: '0.25rem 0.5rem',
+                          borderRadius: '0.25rem',
+                          textAlign: 'center',
+                          display: 'inline-block',
+                          marginLeft: '4.8rem',
+                          fontSize: '0.75rem'
+                        }}
+                      >
+                        Add Review
+                      </Link>
               </div>
             </div>
           ))}
@@ -99,3 +146,4 @@ export const Feature = () => {
     </div>
   );
 };
+

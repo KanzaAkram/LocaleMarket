@@ -71,6 +71,21 @@ const Shop = () => {
                   </div>
                   <p className="text-red-600">${val.price}</p>
                 </div>
+                <Link
+                        to="/AddReview"
+                        style={{
+                          backgroundColor: 'green',
+                          color: 'white',
+                          padding: '0.25rem 0.5rem',
+                          borderRadius: '0.25rem',
+                          textAlign: 'center',
+                          display: 'inline-block',
+                          marginLeft: '4.8rem',
+                          fontSize: '0.75rem'
+                        }}
+                      >
+                        Add Review
+                      </Link>
               </div>
             </div>
           ))}
