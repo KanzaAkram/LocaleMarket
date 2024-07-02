@@ -5,6 +5,7 @@ const cors = require('cors');
 const app = express();  // Initialize Express app
 
 app.use(cors());  // Use CORS middleware
+app.use("/uploads", express.static(path.join(__dirname, "public/uploads")));
 
 const PORT = process.env.PORT || 3000;
 

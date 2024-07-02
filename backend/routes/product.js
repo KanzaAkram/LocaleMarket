@@ -5,28 +5,61 @@ const pool = require('../db');
 const authenticate = require('../middleware/authenticateToken');
 
 // Product upload route
-router.post('/upload', authenticate, upload.single('image'), async (req, res) => {
-  const { name, price, description, total_stock, small, medium, large, category_id } = req.body;
-  const { file } = req;
+router.post(
+  "/upload",
+  authenticate,
+  upload.single("image"),
+  async (req, res) => {
+    const {
+      name,
+      price,
+      description,
+      total_stock,
+      small,
+      medium,
+      large,
+      category_id,
+    } = req.body;
+    const { file } = req;
 
-  if (!name || !price || !description || !total_stock || !category_id || !file) {
-    return res.status(400).json({ message: 'All fields are required' });
+    if (
+      !name ||
+      !price ||
+      !description ||
+      !total_stock ||
+      !category_id ||
+      !file
+    ) {
+      return res.status(400).json({ message: "All fields are required" });
+    }
+
+    try {
+      const imageUrl = `/${file.filename}`;
+      const seller_id = req.user.id; // Use the authenticated user's ID
+
+      const query = `INSERT INTO products (name, price, image, description, total_stock, small, medium, large, category_id, seller_id) 
+                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+
+      await pool.query(query, [
+        name,
+        price,
+        imageUrl,
+        description,
+        total_stock,
+        small,
+        medium,
+        large,
+        category_id,
+        seller_id,
+      ]);
+
+      res.status(201).json({ message: "Product uploaded successfully" });
+    } catch (error) {
+      console.error("Database error:", error);
+      res.status(500).json({ message: "Database error", error });
+    }
   }
-
-  try {
-    const imageUrl = `/uploads/${file.filename}`;
-    const seller_id = req.user.id; // Use the authenticated user's ID
-
-    const query = `INSERT INTO products (name, price, image, description, total_stock, small, medium, large, category_id, seller_id) 
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
-
-    await pool.query(query, [name, price, imageUrl, description, total_stock, small, medium, large, category_id, seller_id]);
-
-    res.status(201).json({ message: 'Product uploaded successfully' });
-  } catch (error) {
-    res.status(500).json({ message: 'Database error', error });
-  }
-});
+);
 
 // Fetch all products
 router.get('/all', async (req, res) => {
