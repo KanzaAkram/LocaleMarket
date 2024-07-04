@@ -3,9 +3,9 @@ import Banner from "../components/Banner";
 import { Feature } from "../components/Feature";
 import { Review } from "../components/Review";
 import { BestSeller } from "../components/BestSeller";
-import { NewDesignCover } from "../components/NewDesignCover";
 import { Blog } from "../components/Blog";
 import Sidebar from "../components/Sidebar";
+import AboutSection from "../components/AboutSection";
 
 const Home = () => {
   return (
@@ -13,9 +13,9 @@ const Home = () => {
       <Banner />
       <Feature />
       <Review />
-      <BestSeller />
-      <NewDesignCover />
-      <Blog />
+      {/* <BestSeller /> */}
+      <AboutSection />
+      {/* <Blog /> */}
       <Sidebar />
     </>
   );

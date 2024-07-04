@@ -110,10 +110,11 @@ code {
   bottom: 0;
 }
 .bg-design-cover {
-  background-image: url(./../public/images/bg2.jpg);
-  background-repeat: no-repeat;
-  padding: 6rem 0;
+  /* background-image: url(./../public/images/bg2.jpg); */
+  /* background-repeat: no-repeat; */
+  padding: 0rem 0;
   position: relative;
+  background-color: #f2f2f2;
 }
 
 /* Modal Overlay */

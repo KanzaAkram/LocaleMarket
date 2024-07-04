@@ -935,11 +935,18 @@ video {
   margin-top: 10px;
 }
 
+.text-2xll {
+  font-size: 1.5rem;
+  line-height: 3.75rem;
+  margin-top: 2px;
+}
+
 .text-2xxxl {
   font-size: 1.5rem;
   line-height: 3.75rem;
   margin-top: 1.5px;
 }
+
 
 .text-3xl {
   font-size: 1.875rem;
@@ -964,6 +971,10 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 2.75rem;
+}
+.text-x {
+  font-size: 1rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {

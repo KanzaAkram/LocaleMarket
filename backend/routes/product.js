@@ -4,7 +4,6 @@ const upload = require('../middleware/upload');
 const pool = require('../db');
 const authenticate = require('../middleware/authenticateToken');
 
-// Product upload route
 router.post('/upload', authenticate, upload.single('image'), async (req, res) => {
   const { name, price, description, total_stock, small, medium, large, category_id } = req.body;
   const { file } = req;
@@ -14,17 +13,20 @@ router.post('/upload', authenticate, upload.single('image'), async (req, res) =>
   }
 
   try {
-    const imageUrl = `/uploads/${file.filename}`;
+    const imageUrl = `/${file.filename}`;
     const seller_id = req.user.id; // Use the authenticated user's ID
 
     const query = `INSERT INTO products (name, price, image, description, total_stock, small, medium, large, category_id, seller_id) 
                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
 
-    await pool.query(query, [name, price, imageUrl, description, total_stock, small, medium, large, category_id, seller_id]);
+    // await pool.query(query, [name, price, imageUrl, description, total_stock, small, medium, large, category_id, seller_id]);
+
+    await pool.query(query, [name, price, imageUrl, description, total_stock, small || null, medium || null, large || null, category_id, seller_id]);
 
     res.status(201).json({ message: 'Product uploaded successfully' });
   } catch (error) {
-    res.status(500).json({ message: 'Database error', error });
+    console.error('Error uploading product:', error);
+    res.status(500).json({ message: 'Database error', error: error.message });
   }
 });
 

@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , useNavigate} from "react-router-dom";
 import { navbar } from "../data/Data";
-import { BiSearch, BiShoppingBag } from "react-icons/bi";
+import { BiSearch, BiShoppingBag, BiUser } from "react-icons/bi";
 import Sidebar from "./Sidebar";
 import { useSelector } from "react-redux";
+import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 
 const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
-
+  const navigate = useNavigate();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -26,6 +27,12 @@ const Header = () => {
 
   const { totalItems } = useSelector((state) => state.cart);
 
+
+  const handleLogout = () => {
+    // Clear localStorage
+    localStorage.clear();
+    window.location.href = '/';
+  };
   return (
     <>
       <div
@@ -48,10 +55,10 @@ const Header = () => {
             ))}
           </ul>
 
-          <div className="flex flex-wrap text-2xxl">
-            <Link className="mr-4 text-2xxxl hover:text-white">
-              <BiSearch />
-            </Link>
+          <div className="flex flex-wrap text-2xxl" >
+            <Link to="/loginsignup" className="text-2xxl hover:text-white text-2xll" >
+                <BiUser />
+              </Link>
             <div className="relative">
               <Link className="text-2xxl hover:text-white" onClick={toggleSidebar}>
                 <BiShoppingBag />
@@ -60,6 +67,13 @@ const Header = () => {
                 <span className="text-white">{totalItems}</span>
               </div>
             </div>
+              <button
+              onClick={handleLogout}
+              className="rounded-md hover:text-white "
+              style={{height: '30px', width: '80px', fontSize: '1.25rem', lineHeight: '1rem', marginLeft: '50px'}}
+            >
+              LOGOUT
+            </button>
           </div>
         </div>
       </div>

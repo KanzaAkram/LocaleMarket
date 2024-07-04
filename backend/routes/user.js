@@ -55,28 +55,49 @@ router.post('/login', async (req, res) => {
   }
 
   try {
-    // Search in both tables for the user
-    let query = 'SELECT * FROM sellers WHERE email = ? UNION SELECT * FROM buyers WHERE email = ?';
-    const [rows] = await pool.query(query, [email, email]);
+    // Check if the user exists in the sellers table
+    let sellerQuery = 'SELECT * FROM sellers WHERE email = ?';
+    const [sellerRows] = await pool.query(sellerQuery, [email]);
 
-    if (rows.length === 0) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+    if (sellerRows.length > 0) {
+      const user = sellerRows[0];
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+
+      if (!isPasswordValid) {
+        return res.status(400).json({ message: 'Invalid credentials' });
+      }
+
+      const token = generateToken({ id: user.seller_id, email: user.email, role: 'seller' });
+      return res.status(200).json({ 
+        message: 'Login successful',
+        token, 
+        role: 'seller'
+      });
     }
 
-    const user = rows[0];
-    const isPasswordValid = await bcrypt.compare(password, user.password);
+    // Check if the user exists in the buyers table
+    let buyerQuery = 'SELECT * FROM buyers WHERE email = ?';
+    const [buyerRows] = await pool.query(buyerQuery, [email]);
 
-    if (!isPasswordValid) {
-      return res.status(400).json({ message: 'Invalid credentials' });
+    if (buyerRows.length > 0) {
+      const user = buyerRows[0];
+      const isPasswordValid = await bcrypt.compare(password, user.password);
+
+      if (!isPasswordValid) {
+        return res.status(400).json({ message: 'Invalid credentials' });
+      }
+
+      const token = generateToken({ id: user.buyer_id, email: user.email, role: 'buyer' });
+      return res.status(200).json({ 
+        message: 'Login successful',
+        token, 
+        role: 'buyer'
+      });
     }
 
-    // Determine the user's role based on which table they were found in
-    const role = rows[0].hasOwnProperty('seller_specific_column') ? 'seller' : 'buyer';
-    const token = generateToken({ id: user.id, email: user.email, role });
-    res.status(200).json({ 
-      message: 'Login successful',
-      token 
-    });
+    // If the user is not found in either table
+    return res.status(404).json({ message: 'Email does not exist. Please register.' });
+
   } catch (error) {
     res.status(500).json({ message: 'Database error', error });
   }

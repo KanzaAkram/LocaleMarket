@@ -9,7 +9,12 @@ import {
   Contact,
   NotFoundPage,
 } from "./pages/index";
-import LoginSignupPage from "./components/loginSignup";
+import SellerDashboard from "./pages/SellerDashboard";
+import Checkout from "./pages/Checkout";
+import AddProducts from "./pages/AddProducts";
+import Login from "./pages/Login"
+import AboutSection from "./components/AboutSection";
+import AddReview from "./pages/AddReview";
 
 function App() {
   return (
@@ -23,7 +28,12 @@ function App() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/*" element={<NotFoundPage />} />
-          <Route path="/loginsignup" element={<LoginSignupPage />} />
+          <Route path="/sellerdashboard" element={<SellerDashboard />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/addproducts" element={<AddProducts />} />
+          <Route path="/loginsignup" element={<Login />} />
+          <Route path="/about" element={<AboutSection />} />
+          <Route path="/addreview" element={<AddReview />} />
         </Routes>
         <Footer />
       </Router>
